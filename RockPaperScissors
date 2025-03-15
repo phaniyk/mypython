@@ -1,0 +1,58 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+user_random_choice = int(input('What do you choose? Type 0 for Rock, 1 for Paper and 2 for Scissors: '))
+if user_random_choice == 0:
+    print("You Chose: Rock", rock)
+elif user_random_choice == 1:
+    print("You Chose: Paper",paper)
+elif user_random_choice == 2:
+    print("You Chose: Scissors",scissors)
+comp_random_choice = random.randint(0,2)
+if comp_random_choice == 0:
+    print("Computer Chose: Rock",rock)
+elif comp_random_choice == 1:
+    print("Computer Chose: Paper",paper)
+elif comp_random_choice == 2:
+    print("Computer Chose: Scissors",scissors)
+
+if user_random_choice == comp_random_choice:
+    print('It is a Draw!')
+if user_random_choice == 0 and comp_random_choice == 1:
+    print('Computer Wins! & You Lose!')
+if user_random_choice == 0 and comp_random_choice == 2:
+    print('You Win! & Computer Loses!')
+if user_random_choice == 1 and comp_random_choice == 0:
+    print('You Win! & Compter Loses!')
+if user_random_choice == 1 and comp_random_choice == 2:
+    print('Computer Wins! & You Lose!')
+if user_random_choice == 2 and comp_random_choice == 0:
+    print('Computer Wins! & You Lose!')
+if user_random_choice == 2 and comp_random_choice == 1:
+    print('You Win! & Compter Loses!')
